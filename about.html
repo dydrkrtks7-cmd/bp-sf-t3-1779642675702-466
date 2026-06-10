@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 셔츠룸 - 정보</title>
+    <meta name="description" content="마포 셔츠룸 정보. 주식투자하는 형님들만을 위한 브루탈 라운지. 운영시간, 위치, 연락처. 지금 전화해 010-6279-0862">
+    <meta name="keywords" content="마포 셔츠룸 정보, 마포 주식투자 라운지, 마포라운지 위치, 셔츠룸 운영시간, 투자자모임 장소, 마포술집 정보, sf-t3-1779642675702-466">
+    <link rel="canonical" href="https://sf-t3-1779642675702-466.vercel.app/info">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta property="og:title" content="마포 셔츠룸 - 주식하는 놈들의 정보">
+    <meta property="og:description" content="마포 셔츠룸 정보. 현실을 부수는 투자토크, 맥주한잔, 그리고 압도적인 분위기. 운영시간, 위치, 연락처 확인.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        a {
+            color: #ff0044;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+        img, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        ::selection {
+            background: #ff0044;
+            color: #0a0a0a;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 60px;
+            border-left: 4px solid #ff0044;
+            padding-left: 20px;
+        }
+        section:last-of-type {
+            margin-bottom: 0;
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            color: #ff0044;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 0 #000, 6px 6px 0 rgba(255,0,68,0.3);
+            line-height: 1;
+        }
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ff0044;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        p, li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #b0b0b0;
+        }
+        .text-accent {
+            color: #ff0044;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .border-box {
+            border: 3px solid #ff0044;
+            padding: 30px;
+            background: rgba(255,0,68,0.05);
+            margin-bottom: 30px;
+        }
+        .border-box-accent {
+            border: 3px solid #ffcc00;
+            padding: 30px;
+            background: rgba(255,204,0,0.05);
+            margin-bottom: 30px;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .grid-2 > * {
+            min-width: 0;
+        }
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            body {
+                padding: 10px;
+            }
+            section {
+                padding-left: 10px;
+            }
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ff0044;
+            margin-bottom: 40px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: #ff0044;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #0a0a0a;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                padding: 20px;
+                border-bottom: 2px solid #ff0044;
+                z-index: 100;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        .tel-link {
+            display: inline-block;
+            background: #ff0044;
+            color: #0a0a0a;
+            padding: 12px 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .tel-link:hover {
+            background: #ffcc00;
+            color: #0a0a0a;
+            transform: scale(1.05);
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .detail-item {
+            border: 2px solid #333;
+            padding: 20px;
+        }
+        .detail-item .label {
+            color: #ff0044;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .detail-item .value {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div style="font-size: 1.5rem; font-weight: 900; color: #ff0044; text-transform: uppercase;">마포셔츠룸</div>
+            <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/info">정보</a></li>
+                <li><a href="/gallery">갤러리</a></li>
+                <li><a href="tel:010-6279-0862">전화</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h1>정보</h1>
+            <p class="text-accent">주식하는 놈들의 성지, 마포 셔츠룸</p>
+            <p>여기는 정보 페이지다. 쫄지말고 읽어라. 투자하는 형님들이 모이는 이곳, 마포 셔츠룸의 모든 것을 알려준다. 맥주 한잔 하면서 주식토크? 여기서 해라. 다른 데 가면 시간 낭비다.</p>
+        </section>
+
+        <section>
+            <h2>운영시간</h2>
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <div class="label">평일</div>
+                    <div class="value">18:00 - 03:00</div>
+                </div>
+                <div class="detail-item">
+                    <div class="label">주말</div>
+                    <div class="value">15:00 - 05:00</div>
+                </div>
+                <div class="detail-item">
+                    <div class="label">공휴일</div>
+                    <div class="value">15:00 - 05:00</div>
+                </div>
+                <div class="detail-item">
+                    <div class="label">라스트오더</div>
+                    <div class="value">마감 30분 전</div>
+                </div>
+            </div>
+            <p>문 닫았다고 징징대지 마라. 시간 맞춰서 와라. 진짜 투자자들은 새벽에도 뜬다.</p>
+        </section>
+
+        <section>
+            <h2>위치</h2>
+            <div class="border-box">
+                <p class="text-accent">마포구 서교동 123-45</p>
+                <p>홍대입구역 3번 출구에서 걸어서 5분. 셔츠 한 장 걸치고 오면 된다. 주차? 꿈도 꾸지 마라. 대중교통 이용해라. 진짜 형님들은 택시 탄다.</p>
+                <p>네비게이션 검색: <strong>"마포 셔츠룸"</strong> 또는 <strong>"주식하는 놈들의 성지"</strong></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>연락처</h2>
+            <div class="border-box-accent">
+                <p class="text-accent">전화: 010-6279-0862</p>
+                <p>문자는 받지 않는다. 전화로 직접 걸어라. 투자 상담? 여기서는 주식 얘기만 한다. 다른 용건이면 꺼져라.</p>
+                <a href="tel:010-6279-0862" class="tel-link">지금 전화해</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>이용안내</h2>
+            <div class="grid-2">
+                <div class="border-box">
+                    <h3>드레스코드</h3>
+                    <p>셔츠는 필수다. 셔츠 없으면 들어올 생각도 하지 마라. 정장? 필요 없음. 셔츠 하나로 끝내는 거다. 넥타이는 선택이지만, 하면 더 간지난다.</p>
+                </div>
+                <div class="border-box">
+                    <h3>분위기</h3>
+                    <p>브루탈하다. 가구는 철제, 조명은 네온, 음악은 힙합과 일렉트로닉. 주식 차트가 벽에 걸려있다. 여기서는 주식 얘기만 해도 된다. 정치, 종교, 연애 얘기 금지.</p>
+                </div>
+                <div class="border-box">
+                    <h3>메뉴</h3>
+                    <p>맥주, 소주, 양주. 안주는 간단한 것만 있다. 배고프면 다른 데 가서 먹고 와라. 여기는 주식하는 곳이지 식당이 아니다.</p>
+                </div>
+                <div class="border-box">
+                    <h3>멤버십</h3>
+                    <p>단골 되고 싶으면 존나 자주 와라. 투자 실적 좋은 놈들한테는 혜택 준다. 신규? 첫 방문 시 맥주 한잔 서비스. 조건: 주식 계좌 인증해야 함.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>FAQ - 자주 묻는 개소리</h2>
+            <div class="border-box">
+                <h3>Q: 주식 잘 몰라도 가도 되나요?</h3>
+                <p>A: 몰라도 된다. 하지만 배우려는 의지가 있어야 한다. 여기 와서 "주식 뭐예요?" 묻지 마라. 그건 구글한테 물어봐라.</p>
+            </div>
+            <div class="border-box">
+                <h3>Q: 여자친구랑 가도 되나요?</h3>
+                <p>A: 된다. 단, 여자친구가 주식에 관심 있어야 한다. 아니면 넌 여기서 평생 혼자 올 각오 해라. 우리는 주식 얘기만 한다.</p>
+            </div>
+            <div class="border-box">
+                <h3>Q: 예약 필수인가요?</h3>
+                <p>A: 필수는 아니다. 하지만 금요일 밤에는 자리가 없다. 예약하고 오는 놈이 현명한 놈이다. 전화해라.</p>
+            </div>
+            <div class="border-box">
+                <h3>Q: 주식 종목 추천해주나요?</h3>
+                <p>A: 추천은 안 한다. 하지만 형님들이랑 얘기하다 보면 자연스럽게 정보가 흘러나온다. 책임은 지지 않는다. 투자는 본인 선택이다.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>마포 셔츠룸의 철학</h2>
+            <p>우리는 겉치레를 거부한다. 여기는 가짜 우아함이나 과장된 서비스로 점철된 공간이 아니다. 벽은 거칠고, 조명은 날카롭고, 대화는 직설적이다. 주식시장이 그렇듯, 여기도 냉혹하다. 하지만 진짜를 원하는 놈들은 여기 모인다.</p>
+            <p>셔츠 한 장이면 충분하다. 나머지는 너의 투자 실력과 입담으로 승부를 걸어라. 마포 셔츠룸은 주식하는 형님들의 전장이다. 쫄지말고 들어와라.</p>
+            <p class="text-accent">010-6279-0862 — 지금 전화해</p>
+        </section>
+    </div>
+    <script>
+        // Hamburger menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

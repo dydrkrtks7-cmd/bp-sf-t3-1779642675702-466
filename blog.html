@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 셔츠룸 블로그 - 주식하는 놈들의 투자레터</title>
+    <meta name="description" content="주식투자하는 형님들만을 위한 마포 셔츠룸 블로그. 쫄지말고 들어와. 현실을 부수는 투자토크, 맥주한잔, 그리고 압도적인 분위기.">
+    <meta name="keywords" content="마포 셔츠룸, 주식투자 블로그, 마포라운지, 셔츠룸추천, 투자자모임, 마포술집, 브루탈인테리어, sf-t3-1779642675702-466">
+    <link rel="canonical" href="https://sf-t3-1779642675702-466.vercel.app/blog">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta property="og:title" content="마포 셔츠룸 블로그 - 주식하는 놈들의 성지">
+    <meta property="og:description" content="거침없는 투자토크, 셔츠 한장으로 끝내는 라운지. 마포 셔츠룸 블로그.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        a { color: #ff0066; text-decoration: underline; text-underline-offset: 4px; }
+        a:hover { color: #00ff88; }
+        img, svg { max-width: 100%; height: auto; display: block; }
+        ::selection { background: #ff0066; color: #0a0a0a; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        section { 
+            border: 2px solid #ff0066; 
+            padding: 40px 30px; 
+            margin-bottom: 20px; 
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+            position: relative;
+        }
+        section:last-of-type { margin-bottom: 0; }
+        h1 { 
+            font-size: 3rem; 
+            text-transform: uppercase; 
+            letter-spacing: -2px; 
+            color: #ff0066; 
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-shadow: 4px 4px 0 #00ff88;
+            line-height: 1;
+        }
+        h2 { 
+            font-size: 2rem; 
+            text-transform: uppercase; 
+            letter-spacing: -1px; 
+            color: #00ff88; 
+            margin-bottom: 15px;
+            border-left: 6px solid #ff0066;
+            padding-left: 15px;
+        }
+        h3 { 
+            font-size: 1.4rem; 
+            color: #ff0066; 
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        p, li { font-size: 1.1rem; margin-bottom: 15px; color: #c0c0c0; }
+        .text-accent { color: #ff0066; font-weight: bold; }
+        .border-box { 
+            border: 3px solid #ff0066; 
+            padding: 20px; 
+            margin: 20px 0;
+            background: rgba(255, 0, 102, 0.05);
+        }
+        .border-box-accent { 
+            border: 3px solid #00ff88; 
+            padding: 20px; 
+            margin: 20px 0;
+            background: rgba(0, 255, 136, 0.05);
+        }
+        .grid-2 { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px; 
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            body { padding: 10px; }
+            section { padding: 25px 15px; }
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ff0066;
+            margin-bottom: 30px;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            border-color: #ff0066;
+            color: #ff0066;
+        }
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            font-size: 2rem;
+            color: #ff0066;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+            }
+            nav a {
+                display: none;
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+                border-bottom: 1px solid #333;
+            }
+            nav a:first-child {
+                display: block;
+                width: auto;
+                border: none;
+            }
+            .hamburger-menu {
+                display: block;
+            }
+            nav.active a {
+                display: block;
+            }
+        }
+        .tel-link {
+            display: inline-block;
+            background: #ff0066;
+            color: #0a0a0a !important;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 3px solid #00ff88;
+            transition: all 0.3s;
+            margin: 10px 0;
+        }
+        .tel-link:hover {
+            background: #00ff88;
+            color: #0a0a0a !important;
+            border-color: #ff0066;
+            transform: scale(1.05);
+        }
+        .blog-meta {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+        blockquote {
+            border-left: 4px solid #ff0066;
+            padding: 20px;
+            margin: 30px 0;
+            background: rgba(255, 0, 102, 0.08);
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #00ff88;
+        }
+        .tag {
+            display: inline-block;
+            background: #ff0066;
+            color: #0a0a0a;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/" style="color:#ff0066; font-weight:900;">마포셔츠룸</a>
+            <a href="/">홈</a>
+            <a href="/about">소개</a>
+            <a href="/blog">블로그</a>
+            <a href="/contact">연락처</a>
+            <div class="hamburger-menu" onclick="this.parentElement.classList.toggle('active')">☰</div>
+        </nav>
+
+        <section>
+            <div class="blog-meta">
+                <span class="tag">주식투자</span>
+                <span class="tag">마포셔츠룸</span>
+                <span class="tag">브루탈</span>
+                <br>
+                2024.11.20 | 작성: 형님들
+            </div>
+            
+            <h1>주식하는 놈들은<br>왜 마포 셔츠룸에 꼬이나?</h1>
+            
+            <p class="text-accent">— 쫄지마. 여기서는 진짜 이야기만 한다.</p>
+            
+            <p>야, 형. 너도 느꼈잖아. 증권사 VIP룸에 앉아서 커피 마시는 척 하는 놈들, 펀드매니저 타령하는 개미들, 유튜브에서 "오늘은 이 종목" 떠드는 찐빠들. 그런 곳에서 진짜 투자 이야기가 나올 리가 있냐? 없어. 100% 없어.</p>
+
+            <p>그래서 마포 셔츠룸이다. 여기는 넥타이 풀고 셔츠 한 장 걸친 놈들이 모여서 맥주 까고 주식 얘기하는 곳이야. <strong>가식 없이, 거침없이, 쫄지 않고.</strong></p>
+
+            <blockquote>
+                "여기 오면 차트가 보여. 맥주 한 잔에 3개월 수익률이 결정된다."
+                <br>— 마포 셔츠룸 단골, 10년차 개미
+            </blockquote>
+
+            <h2>왜 하필 마포냐?</h2>
+            
+            <p>강남? 거기는 쇼핑하러 가는 곳이지. 여의도? 정치인들 사진이나 찍고 다니는 곳. 마포는 달라. 홍대 감성에 합정 자유로움, 상수동 힙함이 합쳐진 곳. 거기에 셔츠룸이라는 브루탈한 공간. 완벽한 조합 아니냐?</p>
+
+            <div class="grid-2">
+                <div class="border-box">
+                    <h3>📉 개미들의 성지</h3>
+                    <p>동학개미부터 서학개미까지. 여기서는 수익 인증 안 하면 집에 못 간다. 진짜다.</p>
+                </div>
+                <div class="border-box-accent">
+                    <h3>🍺 맥주는 전략이다</h3>
+                    <p>맥주 한잔에 떡락 얘기, 두잔에 반등 전략, 세잔에 인생 얘기. 모든 투자 레터는 여기서 나온다.</p>
+                </div>
+            </div>
+
+            <h2>형, 여기 오면 이득이다</h2>
+            
+            <p>첫째, <span class="text-accent">가짜 정보 없다.</span> 여기서 "떡상 간다"고 하면 진짜 간다. 안 가면 그 놈이 다음에 쏜다.</p>
+            
+            <p>둘째, <span class="text-accent">인맥이 장난 아니다.</span> 여기 모이는 놈들 중에 펀드 돌리는 형, 스타트업 대표, 은행 지점장 다 있다. 근데 다 셔츠 한 장 입고 와서 술 마신다. 계급장 떼고 보는 게 진짜 투자야.</p>
+            
+            <p>셋째, <span class="text-accent">분위기가 미친다.</span> 네온사인에 브루탈 콘크리트, 셔츠 차림의 남자들. 여기 들어서는 순간부터 너는 투자자야. 일반인이 아니야.</p>
+
+            <div class="border-box" style="text-align:center; margin-top:40px;">
+                <h3 style="font-size:2rem;">☎️ 지금 전화해</h3>
+                <p style="font-size:1.3rem;">예약 없이도 와. 근데 전화하면 맥주 한잔은 내가 쏜다.</p>
+                <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+            </div>
+
+            <h2 style="margin-top:40px;">마포 셔츠룸 오는 법</h2>
+            
+            <p>지하철 타고 와. 합정역 3번 출구. 걸어서 3분. 건물 외관 보고 쫄지 마. 일부러 브루탈하게 지은 거야. 들어오면 네온사인이 반겨줄 거야.</p>
+
+            <p><strong>주의:</strong> 여기 오면 주식 얘기 안 할 수 없다. 준비하고 와. 그리고 쫄지 마. 우리 다 형제니까.</p>
+
+            <p style="margin-top:30px; font-size:0.9rem; color:#666; text-align:right;">
+                — 마포 셔츠룸 운영진 일동<br>
+                <em>주식하는 놈들의 성지에서</em>
+            </p>
+        </section>
+    </div>
+
+    <script>
+        // 햄버거 메뉴 토글 (모바일)
+        document.querySelector('.hamburger-menu').addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.parentElement.classList.toggle('active');
+        });
+        // 네비게이션 밖 클릭시 메뉴 닫기
+        document.addEventListener('click', function(e) {
+            const nav = document.querySelector('nav');
+            if (!nav.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
